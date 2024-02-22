@@ -20,7 +20,7 @@ Telegram Steam Account Manager (telegram_sda) is a versatile bot designed for ma
     ```
 
 ## Usage
-
+- The bot can automatically log in and update the session without requiring manual password input, simply by creating a file named `accounts.txt` and adding accounts in the format `username:password` separated by a new line.
 - An administrator can add a sub-user using the command `/add_subacc`.
 - Sub-users can manage logins via QR code or receive 2FA codes for login, as well as confirm or cancel trades.
 
@@ -33,13 +33,17 @@ Telegram Steam Account Manager (telegram_sda) is a versatile bot designed for ma
 
 Start the bot using the command: `python main.py`
 
-## Русский
+
+
+
+## На русском:
 
 ### Установка:
 
 1. Клонируйте репозиторий на свой компьютер.
 2. Убедитесь, что у вас установлен Python версии 3.9+.
 3. Установите зависимости с помощью `pip install -r requirements.txt`.
+
 
 ### Настройка:
 
@@ -50,14 +54,23 @@ Start the bot using the command: `python main.py`
     ADMIN_PEERID=your_peerid
     ```
 
+    
+## Использование
+- Бот может автоматически входить и обновлять сеанс без необходимости вручную вводить пароль, просто создав файл с именем accounts.txt и добавив аккаунты в формате username:password, разделяя их новой строкой.
+- Администратор может добавить суб-пользователя с помощью команды /add_subacc.
+- Суб-пользователи могут управлять входами через QR-код или получать коды 2FA для входа, а также подтверждать или отменять сделки.
+
+
 ### Запуск:
 
 1. Запустите бота с помощью команды `python main.py`.
 2. Бот готов к использованию!
 
+
 ### Помощь и поддержка
 
 Если у вас возникли вопросы или проблемы, не стесняйтесь обращаться к нам: [Telegram](https://t.me/yan00s)
+
 
 ### Лицензия
 
