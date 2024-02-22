@@ -67,6 +67,8 @@ def login_steam(**kwargs) -> Tuple[Union[LoginExecutor, None], str]:
             exec_login = None
         return exec_login, text
     else:
+        if len(password) < 3:
+            return None, "Invalid session"
         try:
             ses = create_session(Headers().generate())
             exec_login = LoginExecutor(username, password, shared_secret, ses)
@@ -89,9 +91,9 @@ def login_steam(**kwargs) -> Tuple[Union[LoginExecutor, None], str]:
                 text = f"STEAM: {username} can't log in! status = {response.status_code}"
             return exec_login, text
         except Exception:
-            err = f"[{username}] unknown err in refresh token"
+            err = f"[{username}] unknown err in login_steam"
             LOGGER.exception(err)
-    return None, ""
+    return None, "unknown err, check logs..."
 
 
 async def get_userses(peerid: int, mafile_name: str, new_session: bool, **kwargs) -> Tuple[
