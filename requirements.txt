@@ -1,0 +1,10 @@
+aiogram==2.25.1
+fake_headers==1.0.2
+opencv_python==4.8.0.74
+protobuf==4.25.3
+pysteamauth==1.0.0
+python-dotenv==1.0.1
+pyzbar==0.1.9
+Requests==2.31.0
+rsa==4.9
+steampy==0.80
