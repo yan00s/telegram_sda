@@ -18,6 +18,7 @@ Telegram Steam Account Manager (telegram_sda) is a versatile bot designed for ma
     API_TGBOT="your_API_key"
     ADMIN_PEERID=your_peerid
     ```
+3. Move your maFiles to "data" folder
 
 ## Usage
 - The bot can automatically log in and update the session without requiring manual password input, simply by creating a file named `accounts.txt` and adding accounts in the format `username:password` separated by a new line.
@@ -53,7 +54,7 @@ Start the bot using the command: `python main.py`
     API_TGBOT="your_API_key"
     ADMIN_PEERID=your_peerid
     ```
-
+3. Move your maFiles to "data" folder
     
 ## Использование
 - Бот может автоматически входить и обновлять сеанс без необходимости вручную вводить пароль, просто создав файл с именем accounts.txt и добавив аккаунты в формате username:password, разделяя их новой строкой.
