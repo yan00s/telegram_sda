@@ -13,7 +13,7 @@ Telegram Steam Account Manager (telegram_sda) is a versatile bot designed for ma
 ## Setting Environment Variables
 
 1. Create a `.env` file in the project's root directory.
-2. Specify your Telegram bot API key and your peerid from the Telegram bot https://t.me/ShowJsonBot in the `.env` file, following the example:
+2. Specify your [Telegram bot API key](https://t.me/BotFather) and your peerid from the [Telegram bot](https://t.me/ShowJsonBot) in the `.env` file, following the example:
     ```plaintext
     API_TGBOT="your_API_key"
     ADMIN_PEERID=your_peerid
@@ -49,7 +49,7 @@ Start the bot using the command: `python main.py`
 ### Настройка:
 
 1. Создайте файл `.env` в корневой директории проекта.
-2. Укажите ваш API ключ от Telegram бота и ваш peerid из [Telegram бота](https://t.me/ShowJsonBot)  в файле `.env`, следуя примеру:
+2. Укажите ваш [API ключ от Telegram бота](https://t.me/BotFather) и ваш peerid из [Telegram бота](https://t.me/ShowJsonBot)  в файле `.env`, следуя примеру:
     ```plaintext
     API_TGBOT="your_API_key"
     ADMIN_PEERID=your_peerid
