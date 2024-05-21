@@ -1,4 +1,4 @@
-from pysteamauth.pb.steammessages_auth.steamclient_pb2 import CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request
+from pysteamauth.pb2.steammessages_auth.steamclient_pb2 import CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request
 from steampy.exceptions import InvalidCredentials, CaptchaRequired
 from steampy import guard
 from google.protobuf import message as _message
