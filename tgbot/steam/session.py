@@ -65,6 +65,7 @@ def login_steam(**kwargs) -> Tuple[Union[LoginExecutor, None], str]:
             LOGGER.info(text)
         else:
             exec_login = None
+            text = "Invalid session" ######## NEED UPDATE IN GITHUB!!!!
         return exec_login, text
     else:
         if len(password) < 3:
