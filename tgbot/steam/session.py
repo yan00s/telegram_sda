@@ -35,6 +35,7 @@ def login_steam(**kwargs) -> Tuple[Union[LoginExecutor, None], str]:
     username: str = kwargs.get('username', "")
     password: str = kwargs.get('password', "")
     shared_secret = kwargs.get('shared_secret', "")
+    steamid = kwargs.get('steamid', "")
 
     if kwargs.get('new_session', False):
         update_cookies("{}", username)
@@ -46,6 +47,7 @@ def login_steam(**kwargs) -> Tuple[Union[LoginExecutor, None], str]:
         ses = create_session(Headers().generate(), json.loads(cookies))
         exec_login = LoginExecutor(username, "", shared_secret, ses)
         exec_login.refresh_token = get_refresh_token(username)
+        exec_login.steamid = steamid
         need_check = need_check_alive(username)
         text = "anything err"
         if need_check:
