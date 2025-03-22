@@ -174,13 +174,14 @@ class LoginExecutor:
         _ = self.session.post(SteamUrl.Settoken_community_URL, data=com_data)
 
     def check_valid_session(self) -> bool:
-
-        params = {  # # for store:  'https://store.steampowered.com/',
+        self.session.cookies.update({'steamRefresh_steam': f"{self.steamid}%7C%7C{self.refresh_token}"})
+        
+        data = {  # # for store:  'https://store.steampowered.com/',
             'redir': 'https://steamcommunity.com',
         }
 
         try:
-            response = self.session.get('https://login.steampowered.com/jwt/refresh', params=params, timeout=15)
+            response = self.session.post('https://login.steampowered.com/jwt/refresh', data=data, timeout=15)
             if len(response.history) == 1:
                 return False
             if self.username.lower() in response.text:
@@ -188,9 +189,8 @@ class LoginExecutor:
         except Exception:
             err = f"[{self.username}] unknown err in refresh token"
             LOGGER.exception(err)
-
         return False
-
+        
     def _build_signature(self, shared_secret, steam_id: int, client_id: int, version: int):
         msg = (
                 version.to_bytes(2, 'little') +
