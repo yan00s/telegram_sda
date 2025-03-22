@@ -10,14 +10,12 @@ def pars_mafile_data(mafile: dict) -> tuple[bool, dict|str]:
     username = mafile.get('account_name', '')
     shared_secret = mafile.get('shared_secret', '')
     identity_secret = mafile.get('identity_secret', '')
-    oauth = maf_session.get('OAuthToken', '')
     steamid = maf_session.get('SteamID', '')
 
     data = {
         "username": username,
         "password": get_password(username),
         "identity_secret": identity_secret,
-        "oauth": oauth,
         "steamid": steamid,
         "shared_secret": shared_secret
     }
