@@ -1,4 +1,5 @@
 aiogram==2.25.1
+numpy==1.26.4
 fake_headers==1.0.2
 opencv_python==4.8.0.74
 protobuf==4.25.3
