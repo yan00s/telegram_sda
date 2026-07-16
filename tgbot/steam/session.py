@@ -45,6 +45,10 @@ def login_steam(**kwargs) -> Tuple[Union[LoginExecutor, None], str]:
 
     if len(cookies) > 3:
         ses = create_session(Headers().generate(), json.loads(cookies))
+        ses.headers.update({
+            "Accept-Encoding": "gzip, deflate, br",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"})
+        
         exec_login = LoginExecutor(username, "", shared_secret, ses)
         exec_login.refresh_token = get_refresh_token(username)
         exec_login.steamid = steamid
