@@ -7,8 +7,13 @@ Telegram Steam Account Manager (telegram_sda) is a versatile bot designed for ma
 ## Installation
 
 1. Clone the repository to your local machine.
-2. Ensure you have Python 3.9+ installed.
-3. Install dependencies using `pip install -r requirements.txt`.
+2. Ensure you have Python 3.10 installed. (NOT NEWEST!!!)
+3. Just enter this command from your cmd: (ensure you are in folder)
+    ```plaintext
+    python3.10 -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    ```
 
 ## Setting Environment Variables
 
@@ -47,8 +52,13 @@ Telegram Steam Account Manager (telegram_sda) - универсальный бо�
 ### Установка:
 
 1. Клонируйте репозиторий на свой компьютер.
-2. Убедитесь, что у вас установлен Python версии 3.9+.
-3. Установите зависимости с помощью `pip install -r requirements.txt`.
+2. Убедитесь, что у вас установлен Python версии 3.10. (не новее!!!)
+3. Просто введите данные команды внутри терминала: (убедитесь что вы находитесь в папке через терминал)
+    ```plaintext
+    python3.10 -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    ```
 
 
 ### Настройка:
